@@ -3,73 +3,6 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../context/auth';
 import axios from 'axios';
 
-// const products = [
-//   {
-//     name: 'RODE Lavalier II',
-//     price: 29900,
-//     category: 'Microphone',
-//     description: 'Omnidirectional Microphone (Black)',
-//     image:
-//       'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D',
-//   },
-//   {
-//     name: 'SanDisk 1TB Extreme',
-//     price: 300,
-//     category: 'Portable SSD',
-//     description: 'Portable SSD V2 (Black)',
-//     image:
-//       'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?cs=srgb&dl=pexels-math-90946.jpg&fm=jpg',
-//   },
-//   {
-//     name: 'Canon RF 24-105mm',
-//     price: 40000,
-//     category: 'Z Lens',
-//     description: 'f/2.8 L IS USM Z Lens (Canon RF)',
-//     image:
-//       'https://st2.depositphotos.com/27223464/47872/i/450/depositphotos_478728548-stock-photo-fujifilm-t200-mirrorless-camera-silver.jpg',
-//   },
-//   {
-//     name: 'Zhiyun M20C RGB LED',
-//     price: 9012,
-//     category: 'Light',
-//     description: '',
-//     image:
-//       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLY7ni_lW_dFQp-d_LU1jjZynQ6MjkYFjrmeMe6H2bhAUwvhsBCoNosBmtdqx_CEFrK-g&usqp=CAU',
-//   },
-//   {
-//     name: 'Das OSHO DJI Osmo Pocket 3',
-//     price: 3411,
-//     category: 'Rec',
-//     description: '',
-//     image:
-//       'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D',
-//   },
-//   {
-//     name: 'Insta360 Ace Pro',
-//     price: 3400,
-//     category: 'Insta360 ACE 8K Pro',
-//     description: 'Action Camera',
-//     image:
-//       'https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHByb2R1Y3R8ZW58MHx8MHx8fDA%3D',
-//   },
-//   {
-//     name: 'SanDisk Portable SSD',
-//     price: 450,
-//     category: '',
-//     description: '',
-//     image:
-//       'https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2R1Y3R8ZW58MHx8MHx8fDA%3D',
-//   },
-//   {
-//     name: 'Sennheiser Profile USB',
-//     price: 780,
-//     category: 'Condenser Microphone',
-//     description: '',
-//     image:
-//       'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2R1Y3R8ZW58MHx8MHx8fDA%3D',
-//   },
-// ];
-
 const USER_PRODUCTS = 'http://localhost:5000/api/users/products';
 const AVAILABLE_AUCTIONS =
   'http://localhost:5000/api/auctions/available-auctions';
@@ -114,7 +47,7 @@ const Home = () => {
       if (response.data.success) {
         setAvailableAuctions(response.data.data);
       }
-      setMessage(response.data?.message);
+      // setMessage(response.data?.message);
     } catch (error) {
       console.error('Error fetching available auctions:', error.message);
       setMessage(error.message);
